@@ -45,7 +45,7 @@ while {true} do
 							{
 								_playerNear = true;
 							};
-							sleep 0.001;
+							uiSleep 0.001;
 						} forEach playableUnits;
 
 						if ((!_objIsContainer || _objEmpty) && !_playerNear) then
@@ -57,7 +57,7 @@ while {true} do
 				};
 			};
 
-			sleep 0.001;
+			uiSleep 0.001;
 		} forEach allMissionObjects _x;
 	} forEach LSusedclass_list;
 

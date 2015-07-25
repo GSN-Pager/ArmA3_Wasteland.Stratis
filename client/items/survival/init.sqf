@@ -50,7 +50,7 @@ _code =
 			_obj spawn
 			{
 				_this setDamage 1;
-				sleep 5;
+				uiSleep 5;
 				deleteVehicle _this;
 			};
 
@@ -93,7 +93,7 @@ _code =
 				_obj = createVehicle ["Land_BarrelEmpty_F", _pos, [], 0, "CAN_COLLIDE"];
 				_obj setVectorDirAndUp [_vecDir, _vecUp];
 				_obj setDamage 1;
-				sleep 5;
+				uiSleep 5;
 				deleteVehicle _obj;
 			};
 

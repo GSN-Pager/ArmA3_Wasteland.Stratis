@@ -622,7 +622,7 @@ while {true} do
 		_oldPlayersWithTerritoryActivity = [_oldPlayersWithTerritoryActivity, { !(_x in _newPlayersWithTerritoryActivity) }] call BIS_fnc_conditionalSelect;
 	};
 
-	sleep BASE_SLEEP_INTERVAL;
+	uiSleep BASE_SLEEP_INTERVAL;
 	_realLoopTime = diag_tickTime - _initTime;
 	diag_log format["TERRITORY SYSTEM: _realLoopTime was %1", _realLoopTime];
 };

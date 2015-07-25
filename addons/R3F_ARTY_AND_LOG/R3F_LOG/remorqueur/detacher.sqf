@@ -52,11 +52,11 @@ else
 
 			player setDir 90;
 			player setPos (getPos player);
-			sleep 0.05;
+			uiSleep 0.05;
 			detach player;
 		};
 
-		sleep 2;
+		uiSleep 2;
 
 		// On mémorise sur le réseau que le véhicule remorque quelque chose
 		_remorqueur setVariable ["R3F_LOG_remorque", objNull, true];
@@ -73,13 +73,13 @@ else
 			publicVariable "pvar_detachTowedObject";
 		};
 
-		sleep 4;
+		uiSleep 4;
 
 		player switchMove "";
 
 		if ({_objet isKindOf _x} count R3F_LOG_CFG_objets_deplacables > 0) then
 		{
-			// Si personne n'a re-remorquer l'objet pendant le sleep 6
+			// Si personne n'a re-remorquer l'objet pendant le uiSleep 6
 			if (isNull (_remorqueur getVariable "R3F_LOG_remorque") &&
 				(isNull (_objet getVariable "R3F_LOG_est_transporte_par")) &&
 				(isNull (_objet getVariable "R3F_LOG_est_deplace_par"))

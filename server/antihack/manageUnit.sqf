@@ -37,7 +37,7 @@ if (isServer) then
 
 		while {alive _unit && local _unit} do
 		{
-			sleep 1;
+			uiSleep 1;
 			if ((getPosATL _unit) vectorDistance UNIT_POS_ATL > 5) then { _unit setPosATL UNIT_POS_ATL };
 		};
 

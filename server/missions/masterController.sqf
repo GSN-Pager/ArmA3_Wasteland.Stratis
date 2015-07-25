@@ -84,12 +84,12 @@ if (_ctrlQuantity > _nbTypes) then
 						else
 						{
 							_current = nil;
-							sleep 0.5;
+							uiSleep 0.5;
 						};
 					}
 					else
 					{
-						sleep 5;
+						uiSleep 5;
 					};
 				};
 

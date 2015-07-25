@@ -18,7 +18,7 @@ if (local _unit && !isPlayer _unit) then
 {
 	waitUntil
 	{
-		sleep 1;
+		uiSleep 1;
 		_magType = [primaryWeaponMagazine _unit, 0, "", [""]] call BIS_fnc_param;
 		_magType != "" || !alive _unit
 	};
@@ -34,7 +34,7 @@ if (local _unit && !isPlayer _unit) then
 				_unit addMagazines [_magType, _minMags - _magCount];
 			};
 
-			sleep 3;
+			uiSleep 3;
 		};
 	};
 };

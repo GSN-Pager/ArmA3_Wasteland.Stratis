@@ -13,7 +13,7 @@ if (isNull _corpse || alive _corpse || (_money < 1 && count _items == 0)) exitWi
 
 waitUntil
 {
-	sleep 0.1;
+	uiSleep 0.1;
 	isNull _corpse || (vehicle _corpse == _corpse && {(isTouchingGround _corpse || (getPos _corpse) select 2 < 1) && vectorMagnitude velocity _corpse < 1})
 };
 

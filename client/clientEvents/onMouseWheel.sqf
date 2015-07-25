@@ -13,12 +13,12 @@ while {true} do
 {
 	_playerMenuID = player addAction _playerMenuAction;
 
-	waitUntil {sleep 0.1; _veh = vehicle player; _veh != player};
+	waitUntil {uiSleep 0.1; _veh = vehicle player; _veh != player};
 
 	player removeAction _playerMenuID;
 	_playerMenuID = _veh addAction _playerMenuAction;
 
-	waitUntil {sleep 0.1; vehicle player == player};
+	waitUntil {uiSleep 0.1; vehicle player == player};
 
 	_veh removeAction _playerMenuID;
 };

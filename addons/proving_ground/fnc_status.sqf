@@ -9,7 +9,7 @@ if (PG_get(STATUS)) then {
 	PG_set(STATUS,true);
 	[] spawn {
 		while {PG_get(STATUS)} do {
-			sleep 0.5;
+			uiSleep 0.5;
 			_cursortarget = cursorTarget;
 			if ((alive _cursortarget)) then {
 				cutRsc ["balca_debug_hint","PLAIN"];

@@ -92,7 +92,7 @@ FAR_Mute_ACRE =
 			waitUntil { alive player };
 		};
 
-		sleep 0.25;
+		uiSleep 0.25;
 
 		false
 	};

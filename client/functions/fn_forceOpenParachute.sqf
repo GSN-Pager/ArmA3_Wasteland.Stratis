@@ -43,11 +43,11 @@ _para setVelocity [0,0,0];
 
 	if (_wait) then
 	{
-		sleep (4.25 - (diag_tickTime - _startTime)); // parachute deployment time
+		uiSleep (4.25 - (diag_tickTime - _startTime)); // parachute deployment time
 	}
 	else
 	{
-		sleep (0.5 - (diag_tickTime - _startTime));
+		uiSleep (0.5 - (diag_tickTime - _startTime));
 	};
 
 	waitUntil {isTouchingGround _para || !alive _para};
@@ -55,9 +55,9 @@ _para setVelocity [0,0,0];
 	if (!isNull _para) then
 	{
 		_para setVelocity [0,0,0];
-		sleep 0.5;
+		uiSleep 0.5;
 		if (vehicle player == _para) then { moveOut player };
-		sleep 1.5;
+		uiSleep 1.5;
 		deleteVehicle _para;
 	};
 };

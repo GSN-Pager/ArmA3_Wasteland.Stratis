@@ -41,7 +41,7 @@ _owner spawn
 	_owner = _this;
 	_ownerArr = toArray _owner;
 	_letter = if (toString [_ownerArr select (count _ownerArr - 1)] == "s") then { "" } else { "s" };
-	sleep 1;
+	uiSleep 1;
 
 	_hour = date select 3;
 	_mins = date select 4;

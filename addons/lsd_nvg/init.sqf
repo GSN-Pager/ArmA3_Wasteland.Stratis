@@ -127,7 +127,7 @@ MAIN_DISPLAY displayAddEventHandler ["KeyDown",
 			};
 		};
 
-		sleep 0.1;
+		uiSleep 0.1;
 		false
 	};
 };

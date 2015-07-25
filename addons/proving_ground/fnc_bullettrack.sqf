@@ -14,7 +14,7 @@ _trackCam = {
 	_interrupt = (findDisplay 46) displayAddEventHandler ["KeyDown", "c_proving_ground_TRACKING = false;_this set [0,nil];true"];
 	PG_set(TRACKING,true);
 
-	sleep .01;
+	uiSleep .01;
 
 	setAccTime PG_get(bullettime);
 	showCinemaBorder false;
@@ -31,7 +31,7 @@ _trackCam = {
 		_vel = velocity _bullet;
 		_spd = (_vel distance [0,0,0]) max 1;
 		_lastpos = getPosASL _bullet;
-		sleep 0.01;
+		uiSleep 0.01;
 		_velVector = [(_vel select 0)/_spd,(_vel select 1)/_spd,(_vel select 2)/_spd];
 		_cam camSetRelPos [0,-10,2];
 		//_cam camSetRelPos [-5*(_velVector select 0),-5*(_velVector select 1),-5*(_velVector select 2)];
@@ -47,7 +47,7 @@ _trackCam = {
 		_cam camCommit 5;
 		_cam camSetTarget _lastpos;
 		_endTime = time + 5;
-		while {PG_get(TRACKING)&&(time<_endtime)} do {sleep .1};
+		while {PG_get(TRACKING)&&(time<_endtime)} do {uiSleep .1};
 	};
 
 	_cam cameraeffect ["terminate", "back"];
@@ -61,7 +61,7 @@ _trackMarker = {
 	_bullet = _this;
 	_startpos = getPos _bullet;
 	_lastpos = getPos _bullet;
-	sleep .01;
+	uiSleep .01;
 
 	_markerName = "PG_hitmarker" + str(_lastpos)+str(random 100000);
 	createMarkerLocal [_markerName,_lastpos];
@@ -74,7 +74,7 @@ _trackMarker = {
 
 	while {!(isNull _bullet)} do {;
 		_markerName setMarkerPosLocal getPosASL _bullet;
-		sleep 0.01;
+		uiSleep 0.01;
 	};
 };
 

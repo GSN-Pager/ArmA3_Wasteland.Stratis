@@ -130,7 +130,7 @@ while{groupManagmentActive} do
 		_groupListBox lbSetData [_index, getPlayerUID _x];
 	} forEach units player;
 
-	sleep 0.5;
+	uiSleep 0.5;
 	_hasInvite = false;
 	lbClear _playerListBox;
 	lbClear _groupListBox;

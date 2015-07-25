@@ -424,7 +424,7 @@ if (isNil "_boundingBoxReal") then { boundingBoxReal _vehicle } else { _bounding
 
 		deleteVehicle _vehicle;
 
-		sleep 0.1;
+		uiSleep 0.1;
 
 	} forEach _vehClasses;
 

@@ -226,5 +226,5 @@ while {true} do
 			{(getPosATL (R3F_LOG_objet_addAction getVariable "R3F_LOG_heliporte") select 2) >= 0};
 	};
 
-	sleep 0.3;
+	uiSleep 0.3;
 };

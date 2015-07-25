@@ -97,7 +97,7 @@ if (!isNil "_getPublicVar" && !isNil "_isConfigOn") then
 							};
 
 							cutText [_text, "PLAIN DOWN"];
-							sleep 1;
+							uiSleep 1;
 						};
 
 						true call _enableButtons;

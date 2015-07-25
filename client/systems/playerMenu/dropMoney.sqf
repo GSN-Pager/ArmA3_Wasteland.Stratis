@@ -22,7 +22,7 @@ if((player getVariable "cmoney" < _money) OR (player getVariable "cmoney" < 0)) 
 
 mutexScriptInProgress = true;
 player playMove ([player, "AmovMstpDnon_AinvMstpDnon", "putdown"] call getFullMove);
-sleep 0.5;
+uiSleep 0.5;
 
 _cash = createVehicle ["Land_Money_F", [player, [0,1,0]] call relativePos, [], 0, "CAN_COLLIDE"];
 _cash setVariable ["cmoney", _money, true];
@@ -34,5 +34,5 @@ if (["A3W_playerSaving"] call isConfigOn) then
 	[] spawn fn_savePlayerData;
 };
 
-sleep 0.5;
+uiSleep 0.5;
 mutexScriptInProgress = false;

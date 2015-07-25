@@ -48,7 +48,7 @@ _message = format ["<t shadow=""1"">%1<br/>%2<br/>%3<br/></t>",
 
 _control ctrlSetStructuredText (parseText _message);
 
-sleep 20;
+uiSleep 20;
 
 _control ctrlSetFade 1;
 _control ctrlCommit 2;

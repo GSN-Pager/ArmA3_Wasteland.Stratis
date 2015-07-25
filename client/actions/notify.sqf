@@ -12,7 +12,7 @@ MF_MSG_HANDLER = _this spawn {
 	_i = 0;
 	while {_i < _time} do {
 		titleText[_text, "PLAIN DOWN", 0.01];
-		sleep TIME_DELTA;
+		uiSleep TIME_DELTA;
 		_i = _i + TIME_DELTA;
 	};
 };

@@ -39,7 +39,7 @@ if (hasInterface) then
 						_buildList pushBack netId _x;
 					};
 
-					sleep 0.01;
+					uiSleep 0.01;
 				} forEach nearestObjects [player, _spawnBuilding_list, PLAYER_LOOT_SPAWN_RADIUS];
 
 				if (count _buildList > 0) then
@@ -50,6 +50,6 @@ if (hasInterface) then
 			};
 		};
 
-		sleep 10;
+		uiSleep 10;
 	};
 };

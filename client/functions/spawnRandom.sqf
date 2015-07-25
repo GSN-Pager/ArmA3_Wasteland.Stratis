@@ -15,7 +15,7 @@ _rad = _randomLoc select 1;
 _townName = _randomLoc select 2;
 
 _playerPos = [_pos,5,_rad,1,0,0,0] call findSafePos;
-if (_preload) then { waitUntil {sleep 0.1; preloadCamera _playerPos} };
+if (_preload) then { waitUntil {uiSleep 0.1; preloadCamera _playerPos} };
 
 waitUntil {!isNil "bis_fnc_init" && {bis_fnc_init}};
 
@@ -27,7 +27,7 @@ closeDialog 0;
 _townName spawn
 {
 	_townName = _this;
-	sleep 1;
+	uiSleep 1;
 
 	_hour = date select 3;
 	_mins = date select 4;

@@ -102,7 +102,7 @@ switch (_mode) do {
 			GET_CTRL(balca_debug_console_history_IDC) lbSetData [(lbSize GET_CTRL(balca_debug_console_history_IDC))-1,_command];
 		};
 		_code = compile _command;
-		_result = _code spawn {while {PG_tracker} do {sleep .5;call _this}};
+		_result = _code spawn {while {PG_tracker} do {uiSleep .5;call _this}};
 		if (!(isNil {_result})) then {
 			GET_CTRL(balca_debug_console_result_IDC) ctrlSetText str _result;
 			__uiSet(balca_console_result,_result);

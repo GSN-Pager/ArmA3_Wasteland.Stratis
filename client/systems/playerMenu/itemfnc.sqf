@@ -24,7 +24,7 @@ _data = GET_SELECTED_DATA(item_list);
 _use = {_this call mf_inventory_use; REFRESH_DISPLAY;};
 _drop = {_this call mf_inventory_drop; REFRESH_DISPLAY;};
 switch (_switch) do {
-	// we use spawn so the use/drop functions on each item can safely sleep.
+	// we use spawn so the use/drop functions on each item can safely uiSleep.
 	case BTN_USE: {_data spawn _use};
 	case BTN_DROP: {_data spawn _drop};
 	default {};

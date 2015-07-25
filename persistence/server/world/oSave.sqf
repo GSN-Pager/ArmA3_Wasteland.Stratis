@@ -56,7 +56,7 @@ while {true} do
 				if !(_objID in A3W_objectIDs) then { A3W_objectIDs pushBack _objID };
 			};
 
-			sleep 0.01;
+			uiSleep 0.01;
 		};
 	} forEach allMissionObjects "All";
 
@@ -105,7 +105,7 @@ while {true} do
 					if !(_vehID in A3W_vehicleIDs) then { A3W_vehicleIDs pushBack _vehID };
 				};
 
-				sleep 0.01;
+				uiSleep 0.01;
 			};
 		} forEach allMissionObjects "AllVehicles";
 

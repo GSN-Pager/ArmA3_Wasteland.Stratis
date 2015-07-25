@@ -324,7 +324,7 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn || _timeSavingOn || _
 
 				while {true} do
 				{
-					waitUntil {sleep 1; _hcUnit = missionNamespace getVariable [A3W_hcObjSaving_unitName, objNull]; !isNull _hcUnit}; // wait until HC connects
+					waitUntil {uiSleep 1; _hcUnit = missionNamespace getVariable [A3W_hcObjSaving_unitName, objNull]; !isNull _hcUnit}; // wait until HC connects
 
 					_pvarList = if (_firstRun) then { [] } else { ["A3W_hcObjSaving_mergeIDs"] };
 					_pvarList append
@@ -355,7 +355,7 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn || _timeSavingOn || _
 						_firstRun = false;
 					//};
 
-					waitUntil {sleep 5; isNull _hcUnit}; // in case HC crashes, resend vars on reconnect
+					waitUntil {uiSleep 5; isNull _hcUnit}; // in case HC crashes, resend vars on reconnect
 				};
 			}
 			else
@@ -415,7 +415,7 @@ _createTriggers = [] spawn compile preprocessFileLineNumbers "territory\server\c
 
 [_setupPlayerDB, _createTriggers] spawn
 {
-	waitUntil {sleep 0.1; {scriptDone _x} count _this == count _this};
+	waitUntil {uiSleep 0.1; {scriptDone _x} count _this == count _this};
 	A3W_serverSetupComplete = compileFinal "true";
 	publicVariable "A3W_serverSetupComplete";
 };

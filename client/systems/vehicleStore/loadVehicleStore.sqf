@@ -84,6 +84,6 @@ if (!isNil "_owner") then
 	{
 		_escMenu = findDisplay 49;
 		if (!isNull _escMenu) exitWith { _escMenu closeDisplay 0 }; // Force close Esc menu if open
-		sleep 0.1;
+		uiSleep 0.1;
 	};
 };

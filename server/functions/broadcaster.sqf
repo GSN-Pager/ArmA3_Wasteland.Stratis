@@ -13,5 +13,5 @@ while {true} do
 {
 	serverFPS = diag_fps;
 	publicVariable "serverFPS";
-	sleep 1;
+	uiSleep 1;
 };

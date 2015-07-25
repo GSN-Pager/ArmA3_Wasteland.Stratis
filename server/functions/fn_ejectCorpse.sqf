@@ -14,7 +14,7 @@ if (INVALID_CORPSE) exitWith {};
 
 waitUntil
 {
-	sleep 0.1;
+	uiSleep 0.1;
 	_veh = vehicle _corpse;
 	_pos = getPos _veh;
 	INVALID_CORPSE || {(isTouchingGround _veh || _pos select 2 < 5) && {vectorMagnitude velocity _veh < (if (surfaceIsWater _pos) then { 5 } else { 1 })}}

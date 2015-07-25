@@ -37,7 +37,7 @@ _unit spawn
 				if (_anim == "AinjPpneMstpSnonWrflDnon_rolltofront") then
 				{
 					_unit switchMove "";
-					sleep 0.01;
+					uiSleep 0.01;
 					waitUntil {count animationState _unit <= 24}; // > 24 usually means the anim is still in transition
 					[_unit, "AinjPpneMstpSnonWrflDnon"] call switchMoveGlobal;
 					_anim = animationState _unit;
@@ -57,7 +57,7 @@ _unit spawn
 			};
 		};
 
-		sleep 0.2;
+		uiSleep 0.2;
 	};
 };
 
@@ -76,7 +76,7 @@ if (_unit == player) then
 _unit spawn
 {
 	_unit = _this;
-	sleep 1;
+	uiSleep 1;
 
 	if (UNCONSCIOUS(_unit) && isNil {_unit getVariable "FAR_killerSuspects"}) then
 	{
@@ -133,7 +133,7 @@ _unit spawn
 	_unit = _this;
 	_unlimitedStamina = ["A3W_unlimitedStamina"] call isConfigOn;
 
-	sleep 1;
+	uiSleep 1;
 
 	while {UNCONSCIOUS(_unit)} do
 	{
@@ -211,7 +211,7 @@ _unit spawn
 
 	waitUntil
 	{
-		sleep 0.1;
+		uiSleep 0.1;
 		_veh = vehicle _unit;
 		_unconscious = UNCONSCIOUS(_unit);
 		((isTouchingGround _veh || (getPos _veh) select 2 < 1) && {vectorMagnitude velocity _unit < 1}) || !_unconscious
@@ -224,7 +224,7 @@ _unit spawn
 	};
 };
 
-sleep 2;
+uiSleep 2;
 
 if (isPlayer _unit) then
 {
@@ -252,7 +252,7 @@ _unit spawn
 		if (!UNCONSCIOUS(_unit) || STABILIZED(_unit)) exitWith {};
 
 		[((_i / FAR_BleedOut) * 20) + 80] spawn BIS_fnc_bloodEffect;
-		sleep 3;
+		uiSleep 3;
 	};
 };
 
@@ -369,7 +369,7 @@ while {UNCONSCIOUS(_unit) && diag_tickTime < _bleedOut} do
 		if (attachedTo _unit == _draggedBy) then
 		{
 			detach _unit;
-			sleep 0.01;
+			uiSleep 0.01;
 		};
 
 		if (!isPlayer attachedTo _unit) then
@@ -378,7 +378,7 @@ while {UNCONSCIOUS(_unit) && diag_tickTime < _bleedOut} do
 		};
 	};
 
-	sleep 0.1;
+	uiSleep 0.1;
 };
 
 if (alive _unit && !UNCONSCIOUS(_unit)) then // Player got revived

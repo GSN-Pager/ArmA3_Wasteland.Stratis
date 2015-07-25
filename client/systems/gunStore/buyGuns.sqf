@@ -245,7 +245,7 @@ storePurchaseHandle = _this spawn
 		missionNamespace setVariable [_requestKey, nil];
 	};
 
-	sleep 0.25; // double-click protection
+	uiSleep 0.25; // double-click protection
 };
 
 if (typeName storePurchaseHandle == "SCRIPT") then

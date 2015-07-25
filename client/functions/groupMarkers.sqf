@@ -53,7 +53,7 @@ _groupMembers spawn
 			};
 		} forEach units player;
 
-		sleep 1;
+		uiSleep 1;
 	};
 };
 
@@ -135,5 +135,5 @@ while {true} do
 		};
 	} forEach (_groupMembers select 0);
 
-	sleep 0.1;
+	uiSleep 0.1;
 };

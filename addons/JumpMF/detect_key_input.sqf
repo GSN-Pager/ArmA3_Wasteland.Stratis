@@ -76,7 +76,7 @@ if (_pressedKey in actionKeys "GetOver") then
 					(velocity player) select 2
 				];
 
-				sleep 0.5; // Cooldown
+				uiSleep 0.5; // Cooldown
 
 				horde_jumpmf_var_jumping = false;
 			};

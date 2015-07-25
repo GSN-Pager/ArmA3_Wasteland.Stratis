@@ -8,8 +8,8 @@
 
 while {alive _this} do
 {
-	sleep 10;
+	uiSleep 10;
 };
 
-sleep 600;
+uiSleep 600;
 deleteVehicle _this;

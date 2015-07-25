@@ -13,7 +13,7 @@
 #include "R3F_LOG_disable_enable.sqf"
 
 // Attente fin briefing
-sleep 0.1;
+uiSleep 0.1;
 
 private ["_liste_objets_depl_heli_remorq_transp", "_liste_vehicules_connus", "_liste_vehicules", "_count_liste_vehicules", "_i", "_objet"];
 
@@ -74,7 +74,7 @@ while {true} do
 					#endif
 				};
 
-				sleep _sleepDelay;
+				uiSleep _sleepDelay;
 
 			} forEach _liste_vehicules;
 
@@ -86,11 +86,11 @@ while {true} do
 		}
 		else
 		{
-			sleep 10;
+			uiSleep 10;
 		};
 	}
 	else
 	{
-		sleep 2;
+		uiSleep 2;
 	};
 };

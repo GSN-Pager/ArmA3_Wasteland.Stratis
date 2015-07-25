@@ -51,8 +51,8 @@ FAR_HandleRevive =
 		_medicMove = format ["AinvPknlMstpSlayW%1Dnon_medic", [_target, true] call getMoveWeapon];
 		player playMove _medicMove;
 
-		waitUntil {sleep 0.1; animationState player == _medicMove || !CAN_PERFORM};
-		waitUntil {sleep 0.1; animationState player != _medicMove || !CAN_PERFORM};
+		waitUntil {uiSleep 0.1; animationState player == _medicMove || !CAN_PERFORM};
+		waitUntil {uiSleep 0.1; animationState player != _medicMove || !CAN_PERFORM};
 
 		if (CAN_PERFORM) then
 		{
@@ -93,8 +93,8 @@ FAR_HandleStabilize =
 		_medicMove = format ["AinvPknlMstpSlayW%1Dnon_medic", [_target, true] call getMoveWeapon];
 		player playMove _medicMove;
 
-		waitUntil {sleep 0.1; animationState player == _medicMove || !CAN_PERFORM};
-		waitUntil {sleep 0.1; animationState player != _medicMove || !CAN_PERFORM};
+		waitUntil {uiSleep 0.1; animationState player == _medicMove || !CAN_PERFORM};
+		waitUntil {uiSleep 0.1; animationState player != _medicMove || !CAN_PERFORM};
 
 		if (CAN_PERFORM) then
 		{
@@ -171,7 +171,7 @@ FAR_Drag =
 				player selectWeapon primaryWeapon player;
 			};
 
-			sleep 0.5;
+			uiSleep 0.5;
 		};
 	};
 

@@ -16,7 +16,7 @@
 #ifdef R3F_ARTY_enable
 
 // Attente fin briefing
-sleep 0.1;
+uiSleep 0.1;
 
 private ["_liste_vehicules", "_count_liste_vehicules", "_i", "_objet"];
 
@@ -48,12 +48,12 @@ while {true} do
 				_objet setVariable ["R3F_LOG_init_dedie_done", true];
 			}
 
-			sleep (18/_count_liste_vehicules);
+			uiSleep (18/_count_liste_vehicules);
 		} forEach _liste_vehicules;
 	}
 	else
 	{
-		sleep 18;
+		uiSleep 18;
 	};
 };
 

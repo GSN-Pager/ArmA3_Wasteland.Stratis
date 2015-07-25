@@ -18,7 +18,7 @@ disableSerialization;
 _localWarningText = uiNamespace getVariable "TeamKillWarningMessage";
 _control = _localWarningText displayCtrl tkWarningText;
 
-sleep 20;
+uiSleep 20;
 
 _control ctrlSetFade 1;
 _control ctrlCommit 2;

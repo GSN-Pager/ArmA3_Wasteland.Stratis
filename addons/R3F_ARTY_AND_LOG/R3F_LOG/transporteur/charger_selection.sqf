@@ -75,7 +75,7 @@ else
 
 					player globalChat STR_R3F_LOG_action_charger_selection_en_cours;
 
-					sleep 2;
+					uiSleep 2;
 
 					// Choisir une position dégagée (sphère de 50m de rayon) dans le ciel dans un cube de 9km^3
 					private ["_nb_tirage_pos", "_position_attache"];

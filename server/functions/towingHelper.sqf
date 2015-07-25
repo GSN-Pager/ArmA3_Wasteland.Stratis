@@ -23,7 +23,7 @@ switch (_type) do
 		_veh enableSimulation true;
 		(attachedTo _veh) enableSimulation true;
 
-		sleep 0.3;
+		uiSleep 0.3;
 		detach _veh;
 
 		_veh lockDriver false;

@@ -32,10 +32,10 @@ if !(_this) exitWith{};
 		_ps setParticleCircle [0.1, [0, 0, 0]];
 		_ps setDropInterval 0.01;
 
-		sleep (random 1);
+		uiSleep (random 1);
 		deletevehicle _ps;
 		_delay = 10 + random 20;
-		sleep _delay;
+		uiSleep _delay;
 
 	};
 };

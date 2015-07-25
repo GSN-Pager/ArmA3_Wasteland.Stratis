@@ -44,7 +44,7 @@ while { true } do
 					for [{_i = 0}, {_i < 10 && vehicle _unit != _unit}, {_i = _i + 1}] do
 					{
 						moveOut _unit;
-						sleep 0.01;
+						uiSleep 0.01;
 					};
 
 					deleteVehicle _unit;
@@ -70,5 +70,5 @@ while { true } do
 		_cheatFlag = nil;
 	};
 
-	sleep 5;
+	uiSleep 5;
 };

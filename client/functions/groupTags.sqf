@@ -59,8 +59,8 @@ while {true} do
 				};
 			};
 		};
-		sleep 0.1;
+		uiSleep 0.1;
 	} else {
-		sleep 1;
+		uiSleep 1;
 	};
 };

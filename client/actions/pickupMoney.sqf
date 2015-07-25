@@ -38,10 +38,10 @@ if (isNil "_moneyObj" || {player distance _moneyObj > PICK_DISTANCE}) exitWith
 };
 
 player playMove ([player, "AmovMstpDnon_AinvMstpDnon", "putdown"] call getFullMove);
-sleep 0.25;
+uiSleep 0.25;
 
 pvar_processMoneyPickup = [player, netId _moneyObj];
 publicVariableServer "pvar_processMoneyPickup";
 
-sleep 0.75;
+uiSleep 0.75;
 mutexScriptInProgress = false;

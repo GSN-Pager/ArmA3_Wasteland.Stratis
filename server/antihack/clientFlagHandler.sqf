@@ -23,14 +23,14 @@ if (typeName _this == "ARRAY" && {count _this > 1}) then
 		player setDamage 1;
 
 		1 fadeSound 0;
-		sleep 1;
+		uiSleep 1;
 
 		0 fadeMusic 0;
 		2 fadeMusic 1;
 		playMusic "RadioAmbient1";
 
 		999999 cutText ["", "BLACK", 5];
-		sleep 5;
+		uiSleep 5;
 
 		// baibai hacker
 		preprocessFile "client\functions\quit.sqf";

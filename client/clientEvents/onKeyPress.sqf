@@ -81,7 +81,7 @@ if (!_handled && _key in actionKeys "GetOver") then
 					moveOut player;
 					_veh spawn
 					{
-						sleep 1;
+						uiSleep 1;
 						deleteVehicle _this;
 					};
 				};

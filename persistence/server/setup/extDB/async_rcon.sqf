@@ -28,7 +28,7 @@ if(_mode == 1) exitWith {true};
 _key = call compile format["%1",_key];
 _key = _key select 1;
 
-sleep 0.01;
+uiSleep 0.01;
 
 _queryResult = "";
 _loop = true;
@@ -48,8 +48,8 @@ while{_loop} do
 	{
 		if (_queryResult == "[3]") then
 		{
-			diag_log format ["[extDB2] Sleep [4]: %1", diag_tickTime]; // Helps highlight if someone Queries are running slow
-			sleep 0.1;
+			diag_log format ["[extDB2] uiSleep [4]: %1", diag_tickTime]; // Helps highlight if someone Queries are running slow
+			uiSleep 0.1;
 		} else {
 			_loop = false;
 		};

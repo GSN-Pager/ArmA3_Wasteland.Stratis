@@ -77,7 +77,7 @@ fn_deletePlayerData =
 				if (_preload) then
 				{
 					9999 cutText ["Preloading previous location...", "BLACK", 0.01];
-					waitUntil {sleep 0.1; preloadCamera _pos};
+					waitUntil {uiSleep 0.1; preloadCamera _pos};
 				};
 
 				9999 cutText ["Loading previous location...", "BLACK", 0.01];

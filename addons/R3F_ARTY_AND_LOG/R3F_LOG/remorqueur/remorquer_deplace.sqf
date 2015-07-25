@@ -69,14 +69,14 @@ else
 
 				player setDir 90;
 				player setPos (getPos player);
-				sleep 0.05;
+				uiSleep 0.05;
 				detach player;
 			};
 
 			// Faire relacher l'objet au joueur (si il l'a dans "les mains")
 			R3F_LOG_joueur_deplace_objet = objNull;
 			player playMove "AinvPknlMstpSlayWrflDnon_medic";
-			sleep 2;
+			uiSleep 2;
 
 			// Attacher à l'arrière du véhicule au ras du sol
 			[_remorqueur, true] call fn_enableSimulationGlobal;
@@ -115,7 +115,7 @@ else
 				};
 			};
 
-			sleep 5;
+			uiSleep 5;
 		};
 	};
 

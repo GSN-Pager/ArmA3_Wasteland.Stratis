@@ -15,6 +15,6 @@ _startTime = diag_tickTime;
 
 waitUntil
 {
-	sleep 5;
+	uiSleep 5;
 	(diag_tickTime - _startTime >= _delayTime)
 };

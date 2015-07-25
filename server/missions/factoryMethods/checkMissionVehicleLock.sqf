@@ -22,7 +22,7 @@ while {alive _vehicle && _vehicle getVariable ["R3F_LOG_disabled", false]} do
 		if (locked _vehicle > 1) then { _vehicle lock 1 };
 	};
 
-	sleep 3;
+	uiSleep 3;
 };
 
 _vehicle lock 1;

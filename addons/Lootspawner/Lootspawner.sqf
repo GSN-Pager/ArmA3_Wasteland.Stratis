@@ -96,9 +96,9 @@ getUsedclasses = {
 			if !((((lootworldObject_list select _class) select 1) select _item) in LSusedclass_list) then {
 				LSusedclass_list pushBack (((lootworldObject_list select _class) select 1) select _item);
 			};
-			sleep 0.001;
+			uiSleep 0.001;
 		};
-		sleep 0.001;
+		uiSleep 0.001;
 	};
 };
 
@@ -264,7 +264,7 @@ if ((count Buildingstoloot_list) == 0) then {
 					};
 				};
 			};
-			sleep 0.001;
+			uiSleep 0.001;
 			if (swDebugLS) then {
 				dbgloopTimeplU = dbgloopTimeplU + (diag_tickTime - dbgTimeplU);
 				dbgTurnsplU = dbgTurnsplU + 1;
@@ -289,7 +289,7 @@ if ((count Buildingstoloot_list) == 0) then {
 		};
 		//if no players online wait a bit
 		if (!_playersalive) then {
-			sleep 2;
+			uiSleep 2;
 		};
 	};
 	*/

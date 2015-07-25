@@ -37,5 +37,5 @@ while { alive _vehicle } do
 	};
 
 	_previousDmg = _currentDmg;
-	sleep 5;
+	uiSleep 5;
 };

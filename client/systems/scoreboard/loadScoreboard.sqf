@@ -246,6 +246,6 @@ _code spawn
 	while {!isNull _display} do
 	{
 		call _this;
-		sleep 1;
+		uiSleep 1;
 	};
 };

@@ -243,7 +243,7 @@ case 6: {//apply
 						_speed = (PG_get(TARGET_PROPS) select 1);
 						_shift_inc = (_speed*_delay);
 						while {((PG_get(TARGET_PROPS) select 1) == _speed)&&(PG_get(target_mode) in [0,3])} do {
-							sleep _delay;
+							uiSleep _delay;
 							_shift = _shift + _shift_inc;
 							if (abs(_shift)>20) then {_shift_inc = -_shift_inc};
 							[_shift,-1] call PG_get(fnc_move_land_targets);

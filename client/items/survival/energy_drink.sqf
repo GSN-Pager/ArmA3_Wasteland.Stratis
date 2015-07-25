@@ -41,7 +41,7 @@ if (_success) then
 			player setVariable ["energy_drink_active", true];
 			["You have unlimited stamina for 5 minutes", 5] call mf_notify_client;
 
-			sleep (5*60);
+			uiSleep (5*60);
 
 			player enableFatigue true;
 			player setVariable ["energy_drink_active", false];

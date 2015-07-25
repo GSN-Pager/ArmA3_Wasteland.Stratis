@@ -23,13 +23,13 @@ hint "Awaiting server response...";
 
 [] spawn
 {
-	sleep 0.5; // double-click protection
+	uiSleep 0.5; // double-click protection
 	storePurchaseHandle = nil; // To allow purchasing more stuff in the meanwhile
 };
 
 while {isNil "_object" && {time < _requestTimeout}} do
 {
-	sleep 0.1;
+	uiSleep 0.1;
 	_object = player getVariable _requestKey;
 };
 
@@ -45,7 +45,7 @@ if (isNil "_object" || {isNull objectFromNetId _object}) then
 
 		while {isNil "_object" && time < _postTimeout} do
 		{
-			sleep 0.1;
+			uiSleep 0.1;
 			_object = player getVariable _requestKey;
 		};
 

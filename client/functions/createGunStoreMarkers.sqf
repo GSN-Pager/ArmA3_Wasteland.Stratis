@@ -173,6 +173,6 @@ if (["A3W_showGunStoreStatus"] call isConfigOn) then
 			};
 		} forEach _gunStores;
 
-		sleep 1;
+		uiSleep 1;
 	};
 };

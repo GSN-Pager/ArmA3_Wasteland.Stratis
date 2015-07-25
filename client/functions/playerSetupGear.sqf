@@ -19,7 +19,7 @@ if (_vest != "") then { _player addVest _vest };
 if (_headgear != "") then { _player addHeadgear _headgear };
 if (_goggles != "") then { _player addGoggles _goggles };
 
-sleep 0.1;
+uiSleep 0.1;
 
 // Remove GPS
 _player unlinkItem "ItemGPS";

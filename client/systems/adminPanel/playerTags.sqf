@@ -45,7 +45,7 @@ if (_uid call isAdmin) then
 			};
 		} forEach playableUnits;
 
-		sleep 0.5;
+		uiSleep 0.5;
 	};
 
 	{ clearGroupIcons group _x } forEach playableUnits;

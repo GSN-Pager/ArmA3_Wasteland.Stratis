@@ -66,7 +66,7 @@ switch _mode do {
 					_colorIDOld = _colorID;
 				};
 
-				sleep 0.01;
+				uiSleep 0.01;
 			};
 		};
 	};

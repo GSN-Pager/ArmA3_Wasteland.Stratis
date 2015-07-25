@@ -8,7 +8,7 @@ if (isClass(configFile >> "cfgPatches" >> "ace_main")) then {
 };
 
 if (time==0) then {
-	sleep .1;
+	uiSleep .1;
 };
 
 if !(isNil{GVAR(init)}) exitWith {};

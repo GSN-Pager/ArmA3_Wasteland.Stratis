@@ -34,7 +34,7 @@ _obj = _id call mf_inventory_takeable;
 if not(isNull _obj) then {
 	MUTEX_LOCK_OR_FAIL;
 	player playMove ([player, "AmovMstpDnon_AinvMstpDnon", "putdown"] call getFullMove);
-	sleep 0.5;
+	uiSleep 0.5;
 
 	if (!isNull _obj) then
 	{
@@ -43,6 +43,6 @@ if not(isNull _obj) then {
 		titleText [format ['You have picked up "%1"', (_id call mf_inventory_get) select NAME], "PLAIN DOWN", 0.5];
 	};
 
-	sleep 0.5;
+	uiSleep 0.5;
 	MUTEX_UNLOCK;
 };

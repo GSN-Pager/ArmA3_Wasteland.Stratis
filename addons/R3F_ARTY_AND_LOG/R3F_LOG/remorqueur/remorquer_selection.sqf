@@ -89,11 +89,11 @@ else
 
 						player setDir 90;
 						player setPos (getPos player);
-						sleep 0.05;
+						uiSleep 0.05;
 						detach player;
 					};
 
-					sleep 2;
+					uiSleep 2;
 
 					// Attacher à l'arrière du véhicule au ras du sol
 					[_remorqueur, true] call fn_enableSimulationGlobal;
@@ -134,7 +134,7 @@ else
 						};
 					};
 
-					sleep 5;
+					uiSleep 5;
 
 					player switchMove "";
 				}

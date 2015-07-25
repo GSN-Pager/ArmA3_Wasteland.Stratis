@@ -69,9 +69,9 @@ else
 		player forceWalk true;
 		player action ["SwitchWeapon", player, player, 100];
 
-		sleep 0.5;
+		uiSleep 0.5;
 
-		// Si le joueur est mort pendant le sleep, on remet tout comme avant
+		// Si le joueur est mort pendant le uiSleep, on remet tout comme avant
 		if (!alive player) then
 		{
 			R3F_LOG_joueur_deplace_objet = objNull;
@@ -133,7 +133,7 @@ else
 				{
 					player globalChat STR_R3F_LOG_ne_pas_monter_dans_vehicule;
 					player action ["eject", vehicle player];
-					sleep 1;
+					uiSleep 1;
 				}
 				else
 				{
@@ -147,10 +147,10 @@ else
 				{
 					player globalChat STR_R3F_LOG_courir_trop_vite;
 					player playMove "AmovPpneMstpSnonWnonDnon";
-					sleep 1;
+					uiSleep 1;
 				};
 
-				sleep 0.25;
+				uiSleep 0.25;
 			};
 
 			// L'objet n'est plus porté, on le repose

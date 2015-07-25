@@ -16,10 +16,10 @@ publicVariableServer "pvar_teamSwitchUnlock";
 
 setPlayerRespawnTime 1e11;
 player setDamage 1;
-sleep 1;
+uiSleep 1;
 
 9999 cutText ["", "BLACK", 3];
-sleep 3;
+uiSleep 3;
 
 uiNamespace setVariable ["BIS_fnc_guiMessage_status", false];
 _msgBox = [localize "STR_WL_Punish_Teamkiller"] spawn BIS_fnc_guiMessage;

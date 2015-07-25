@@ -89,7 +89,7 @@ else
 
 	waitUntil
 	{
-		sleep 0.1;
+		uiSleep 0.1;
 		_nearestBuilding = _npc getVariable "storeNPC_nearestBuilding";
 		!isNil "_nearestBuilding"
 	};
@@ -208,7 +208,7 @@ if (isServer) then
 			_desk = [_npc, _bPos, _pDir, _deskDirMod] call compile preprocessFileLineNumbers "server\functions\createStoreFurniture.sqf";
 			_npc setVariable ["storeNPC_cashDesk", netId _desk, true];
 
-			sleep 1;
+			uiSleep 1;
 
 			_bbNPC = boundingBoxReal _npc;
 			_bbDesk = boundingBoxReal _desk;
@@ -237,7 +237,7 @@ if (isServer) then
 			};
 
 			detach _npc;
-			sleep 1;
+			uiSleep 1;
 
 			_npc enableSimulation false;
 			_desk enableSimulationGlobal false;
@@ -253,7 +253,7 @@ if (isServer) then
 // Add sell box in front of counter
 if (hasInterface) then
 {
-	waitUntil {sleep 1; _npc getVariable ["storeNPC_setupComplete", false]};
+	waitUntil {uiSleep 1; _npc getVariable ["storeNPC_setupComplete", false]};
 
 	_desk = objectFromNetId (_npc getVariable ["storeNPC_cashDesk", ""]);
 	_face = _npc getVariable ["storeNPC_face", ""];
@@ -311,7 +311,7 @@ if (hasInterface) then
 
 			while {true} do
 			{
-				sleep 5;
+				uiSleep 5;
 				if (!alive _sellBox) then
 				{
 					deleteVehicle _sellBox;

@@ -58,7 +58,7 @@ else
 
 			player globalChat STR_R3F_LOG_action_decharger_en_cours;
 
-			sleep 2;
+			uiSleep 2;
 
 			// On pose l'objet au hasard vers l'arrière du transporteur
 			_objet_a_decharger setPos [

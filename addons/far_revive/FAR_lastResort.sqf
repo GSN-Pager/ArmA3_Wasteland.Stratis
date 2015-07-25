@@ -29,7 +29,7 @@ if !(player getVariable ["performingDuty", false]) then
 				player removeMagazine "DemoCharge_Remote_Mag";
 			};
 
-			sleep 1.75;
+			uiSleep 1.75;
 
 			_pos = getPosATL player;
 			_pos set [2, (_pos select 2) + 0.5];

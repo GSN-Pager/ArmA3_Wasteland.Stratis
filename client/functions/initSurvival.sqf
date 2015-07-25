@@ -42,7 +42,7 @@ mf_survival_handle1 = [] spawn
 	};
 
 	while {true} do {
-		sleep TIME_DELTA;
+		uiSleep TIME_DELTA;
 		waitUntil {!respawnDialogActive && alive player};
 		if (round random 1 == 0) then _decrementHunger;
 		if (round random 1 == 0) then  _decrementThirst;
@@ -68,7 +68,7 @@ mf_survival_handle2 = [] spawn
 
 	_warnf1 = true; _warnf2 = true; _warnf3 = true; _warnf4 = true;
 	while{true} do {
-		sleep TIME_DELTA;
+		uiSleep TIME_DELTA;
 		waitUntil {!respawnDialogActive};
 		switch(true) do {
 			case (hungerLevel <= 0 && _warnf1): {_warnf1 = false; hint parseText format["<t size='2' color='#ff0000'>Warning</t><br/><br/>You are now starving to death, find something to eat quickly!", round hungerLevel];};
@@ -87,7 +87,7 @@ mf_survival_handle3 = [] spawn
 
 	_warnd1 = true; _warnd2 = true; _warnd3 = true; _warnd4 = true;
 	while{true} do {
-		sleep TIME_DELTA;
+		uiSleep TIME_DELTA;
 		waitUntil {!respawnDialogActive};
 		switch(true) do {
 			case (thirstLevel <= 0 && _warnd1): {_warnd1 = false; hint parseText format["<t size='2' color='#ff0000'>Warning</t><br/><br/>You are now suffering from severe dehydration, find something to drink quickly!", round thirstLevel];};

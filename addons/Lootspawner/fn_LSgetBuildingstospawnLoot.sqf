@@ -50,7 +50,7 @@ _begintime = diag_tickTime;
 						_buildPosZadj_list pushBack ((Buildingpositions_list select _forEachIndex) select 2);
 					};
 				};
-				sleep 0.001;
+				uiSleep 0.001;
 			}forEach Buildingstoloot_list;
 			//diag_log format["-- LOOTSPAWNER DEBUG BaP: v%1v%2v :: v%3v :: v%4v --", _BaPname, _lootClass, _buildPosViable_list, _buildPosZadj_list];
 			//get spawn position, here the former _x
@@ -73,7 +73,7 @@ _begintime = diag_tickTime;
 					_spwnPos = [_spwnPos select 0, _spwnPos select 1, (_spwnPos select 2) + _genZadjust];
 					//check if position has old loot
 					if ((count (nearestObjects [_spwnPos, LSusedclass_list, 0.5])) == 0) then {
-						sleep 0.001;
+						uiSleep 0.001;
 						//check what type of loot to spawn, get chance for loot every time, so all combos in spawnClassChance_list are viable
 						_lootType = [[1,2,3,4,5], spawnClassChance_list select _lootClass] call fn_selectRandomWeighted;
 
@@ -179,7 +179,7 @@ _begintime = diag_tickTime;
 								_lootholder setPosATL _spwnPos;
 							};
 
-							sleep 0.001;
+							uiSleep 0.001;
 							// Fix for wrong height (getPos Z = height above floor under object)
 							_spwnPos set [2, (_spwnPos select 2) - ((getPos _lootholder) select 2)];
 
@@ -204,7 +204,7 @@ _begintime = diag_tickTime;
 			_x setVariable ["BuildingLoot", [1, serverTime], true];
 		};
 	};
-	sleep 0.001;
+	uiSleep 0.001;
 	};
 }forEach _BaP_list;
 //diag_log format["-- LOOTSPAWNER DEBUG BaP: %1 buildings ready, needed %2s, EXIT now --", (count _BaP_list), (diag_tickTime - _begintime)];

@@ -208,7 +208,7 @@ while {true} do
 						_respawnPos = getPosATL _veh;
 					};
 
-					sleep 0.1;
+					uiSleep 0.1;
 					deleteVehicle _veh;
 
 					if (_vehClass isKindOf "Ship_F") then

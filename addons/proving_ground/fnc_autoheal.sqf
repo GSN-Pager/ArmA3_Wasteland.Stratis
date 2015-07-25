@@ -7,7 +7,7 @@ if PG_get(Autoheal) then {
 	PG_set(Autoheal,true);
 	[] spawn {
 		while {PG_get(Autoheal)} do {
-			sleep 0.5;
+			uiSleep 0.5;
 			_cursortarget = cursorTarget;
 			_veh = vehicle player;
 			_p_hit_EH = player addEventHandler ["hit",{player setDammage 0}];
@@ -27,7 +27,7 @@ if PG_get(Autoheal) then {
 				player setDammage 0;
 				_veh setDammage 0;
 				_veh setFuel 1;
-				sleep .5;
+				uiSleep .5;
 			};
 			player removeEventHandler ["hit",_p_hit_EH];
 			player removeEventHandler ["dammaged",_p_dam_EH];

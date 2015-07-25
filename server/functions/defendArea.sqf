@@ -100,7 +100,7 @@ _wp2 setWaypointType "DISMISS";
 				};
 			};
 
-			sleep 1;
+			uiSleep 1;
 
 			if (!isNull _unit) then
 			{
@@ -110,7 +110,7 @@ _wp2 setWaypointType "DISMISS";
 				{
 					_doMove = [[0, 5 + random 65, 0], -(([_targetPos, _unitPos] call BIS_fnc_dirTo) + (45 - random 90))] call BIS_fnc_rotateVector2D;
 					_unit moveTo (_targetPos vectorAdd _doMove);
-					sleep 3;
+					uiSleep 3;
 				};
 			};
 		};

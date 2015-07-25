@@ -30,14 +30,14 @@ player addEventHandler ["Put",
 		{
 			_vehicle = _this;
 
-			waitUntil {sleep 1; !alive player || player distance _vehicle > 25};
+			waitUntil {uiSleep 1; !alive player || player distance _vehicle > 25};
 
 			_sellScript = [_vehicle, player, -1, [true, true]] execVM "client\systems\selling\sellCrateItems.sqf";
-			waitUntil {sleep 0.1; scriptDone _sellScript};
+			waitUntil {uiSleep 0.1; scriptDone _sellScript};
 
 			if (!alive player) then
 			{
-				sleep 0.5;
+				uiSleep 0.5;
 
 				if (player getVariable ["cmoney", 0] > 0) then
 				{
@@ -176,7 +176,7 @@ _uid = getPlayerUID player;
 if (playerSide in [BLUFOR,OPFOR] && {{_x select 0 == _uid} count pvar_teamSwitchList == 0}) then
 {
 	_startTime = diag_tickTime;
-	waitUntil {sleep 1; diag_tickTime - _startTime >= 180};
+	waitUntil {uiSleep 1; diag_tickTime - _startTime >= 180};
 
 	pvar_teamSwitchLock = [_uid, playerSide];
 	publicVariableServer "pvar_teamSwitchLock";

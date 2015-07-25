@@ -231,7 +231,7 @@ _fnc_move_rand_land = {
 				_shift_inc = (random(_rspeed)*_delay);
 				if (random(2)>1) then {_shift_inc = -_shift_inc};
 				while {((alive _unit)&&(PG_get(target_props_rand) select 1) != 0)&&(PG_get(target_mode) == 1)} do {
-					sleep _delay;
+					uiSleep _delay;
 					_shift = _shift + _shift_inc;
 					if (abs(_shift)>20) then {_shift_inc = -_shift_inc};
 					_tpos = [(_pos select 0)+_shift*sin(_dir+90)+_cdist*sin(_dir),(_pos select 1)+_shift*cos(_dir+90)+_cdist*cos(_dir),0];

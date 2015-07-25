@@ -15,11 +15,11 @@ while {true} do
 {
 	if (_territoryCapped) then
 	{
-		sleep _timeInterval;
+		uiSleep _timeInterval;
 	}
 	else
 	{
-		sleep 60;
+		uiSleep 60;
 	};
 
 	_payouts = [];

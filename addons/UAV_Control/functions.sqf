@@ -8,7 +8,7 @@ if (_perm == "side") exitWith {};
 
 while {true} do
 {
-	waitUntil {sleep 0.1; _uav = getConnectedUAV player; !isNull _uav};
+	waitUntil {uiSleep 0.1; _uav = getConnectedUAV player; !isNull _uav};
 
 	// ignore remote designators
 	if !(_uav isKindOf "StaticWeapon") then
@@ -24,5 +24,5 @@ while {true} do
 		["You are not allowed to connect to this unmanned vehicle.", 5] call mf_notify_client;
 	};
 
-	waitUntil {sleep 0.1; _uav != getConnectedUAV player};
+	waitUntil {uiSleep 0.1; _uav != getConnectedUAV player};
 };

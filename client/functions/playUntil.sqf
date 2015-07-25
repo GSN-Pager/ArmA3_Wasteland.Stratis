@@ -46,7 +46,7 @@ while {time < _start+_length} do {
 		};
 	};
 	if _failed exitWith {_complete = false};
-	sleep DURATION_STEP;
+	uiSleep DURATION_STEP;
 };
 player switchMove _previousAnim;
 _complete;

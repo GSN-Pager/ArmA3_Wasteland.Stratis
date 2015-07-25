@@ -104,12 +104,12 @@ switch (_lockState) do
 		    _iterationPercentage = floor (_iteration / _totalDuration * 100);
 
 			2 cutText [format["Object lock %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
-		    sleep 1;
+		    uiSleep 1;
 
-			// Sleep a little extra to show that lock has completed.
+			// uiSleep a little extra to show that lock has completed.
 			if (_iteration >= _totalDuration) exitWith
 			{
-		        sleep 1;
+		        uiSleep 1;
 				_object setVariable ["objectLocked", true, true];
 				_object setVariable ["ownerUID", getPlayerUID player, true];
 				2 cutText ["", "PLAIN DOWN", 1];
@@ -185,12 +185,12 @@ switch (_lockState) do
 		    _iterationPercentage = floor (_iteration / _totalDuration * 100);
 
 			2 cutText [format["Object unlock %1%2 complete", _iterationPercentage, _stringEscapePercent], "PLAIN DOWN", 1];
-		    sleep 1;
+		    uiSleep 1;
 
-			// Sleep a little extra to show that lock has completed
+			// uiSleep a little extra to show that lock has completed
 			if (_iteration >= _totalDuration) exitWith
 			{
-		        sleep 1;
+		        uiSleep 1;
 				_object setVariable ["objectLocked", false, true];
 				_object setVariable ["ownerUID", nil, true];
 				_object setVariable ["baseSaving_hoursAlive", nil, true];

@@ -41,7 +41,7 @@ _objCleanup =
 		_delQtyO = _delQtyO + 1;
 	};
 
-	sleep 0.01;
+	uiSleep 0.01;
 };
 
 while {true} do
@@ -93,7 +93,7 @@ while {true} do
 			};
 		};
 
-		sleep 0.01;
+		uiSleep 0.01;
 	} forEach allGroups;
 
 	diag_log format ["SERVER CLEANUP: Deleted %1 empty groups", _delQtyG];
